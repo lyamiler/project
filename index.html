@@ -4,48 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <header>
-        <h1>Глэмпинг-отель</h1>
-        <nav>
-            <ul>    
-                <li><a href="#">наши преимущества</a></li>
-                <li><a href="#">о нас</a></li>
+    <header class="header">
+        <h1 class="header__title">Глэмпинг-отель</h1>
+        <nav class="header__navigation">
+            <ul class="header__menu menu">    
+                <li class="menu__item"><a class="menu__link" href="#">наши преимущества</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">о нас</a></li>
             </ul>
         </nav>
-        <li><a href="#">кнопка "забронировать сейчас"</a></li>
     </header>
-    <main>
-        <div>
-            <h2>Домики и цены</h2> 
-                <img src="images/dom dlya dvoih.jpg" alt="" width="400">
-                <p>Дом для двоих</p>
-                <img src="images/dom dlya sem'i.jpg" alt="" width="400">
-                <p>Дом для семьи</p>
-                <img src="images/dom dlya bolshoi kompanii.jpeg" alt="" width="400">
-                <p>Дом для большой компании</p>
-            <p>Ждем вас в гости!</p>
-            <a href="#">Посмотреть свободные даты</a>
-        </div>
-        <div>
-            <h2>Дополнительные услуги</h2>
-            <div>
-                <img src="images/furaco.jpg" alt="" width="400">
-                <p>Фурако</p>
-                <img src="images/mangal.jpg" alt="" width="400">
-                <p>Мангал</p>
-                <img src="images/bassein.jpg" alt="" width="400">
-                <p>Бассейн</p>
+    <main class="main">
+        <section class="hotel">
+            <h2 class="hotel__title">Глэмпинг-отель</h2>
+            <ul class="hotel__list">
+                <li class="hotel__item">Уникальные домики</li>
+                <li class="hotel__item">Услуги на высшем уровне</li>
+                <li class="hotel__item">Природа и уединение</li>
+            </ul>
+            <button class="hotel__button">ЗАБРОНИРОВАТЬ СЕЙЧАС</button>
+        </section>
+
+        <section class="house">
+            <h2 class="house__title">Домики и цены</h2> 
+            <div class="house__card">
+                <img class="house__img" src="images/domdlyadvoih.jpg" alt="" width="400">
+                <p class="house__price">Дом для двоих</p>
             </div>
-        </div>
-        <h3>Заголовок текста 3</h3>
-        <p>Текст 1 абзац 1</p>
-        <p>Текст 1 абзац 2</p>
+            <div class="house__card">
+                <img class="house__img" src="images/domdlyasem'i.jpg" alt="" width="400">
+                <p class="house__price">Дом для семьи</p>
+            </div>
+            <div class="house__card">
+                <img class="house__img" src="images/domdlyabolshoikompanii.jpeg" alt="" width="400">
+                <p class="house__price">Дом для большой компании</p>
+            </div>
+            <p class="house__text">Ждем вас в гости!</p>
+            <a class="house__link" href="#">Посмотреть свободные даты</a>
+        </section>
+
+        <section class="additional-services">
+            <h2 class="additional-services__title">Дополнительные услуги</h2>
+            <div class="additional-services__card"></div>
+                <img class="additional-services__img" src="images/furaco.jpg" alt="фурако" width="400">
+                <p class="additional-services__price">Фурако</p>
+            </div>
+            <div class="additional-services__card"></div>
+                <img class="additional-services__img" src="images/mangal.jpg" alt="мангал" width="400">
+                <p class="additional-services__price">Мангал</p>
+            </div>
+            <div class="additional-services__card">
+                <img class="additional-services__img" src="images/bassein.jpg" alt="бассейн" width="400">
+                <p class="additional-services__price">Бассейн</p>
+            </div>
+        </section>
     </main>
-    <footer>
-        <h2>Разработчик</h2>
-        <p>Долгомирова Юлия, ЭК-31</p>
+    <footer class="footer">
+        <h2  class="footer__title">Разработчик</h2>
+        <p  class="footer__text">Долгомирова Юлия, ЭК-31</p>
     </footer>
 </body>
 </html>

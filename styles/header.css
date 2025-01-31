@@ -2,4 +2,39 @@
     background-color: rgb(203, 240, 218);
     color:rgb(20, 70, 45);
 }
-
+.menu {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+   }
+   .menu__link{
+    display: block;
+    padding: 10px;
+    margin: 5px;
+    background-color: rgb(63, 150, 129);
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+   }
+   .header__logo-wrap{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+   }      
+   .header__logo-wrap{
+    text-decoration: none;
+    color: rgb(55, 171, 121);
+   }
+   .header__title{
+    margin: 0;
+   }
+  .about__gallery{
+    margin: 0;
+    padding: 20px 0;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    list-style-type: none;
+  }
+   

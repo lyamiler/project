@@ -1,11 +1,3 @@
-.main{
-    background-color: rgb(199, 230, 190);
-    color:rgb(21, 58, 49);
-}
-
-.house {
-    background-color: rgb(163, 203, 153);
-}
 .house__card{
     width: 300px;
     padding: 15px;

@@ -1,0 +1,28 @@
+.reviews {
+    margin-top: 40px; /* Space above reviews section */
+}
+
+.reviews__title {
+    font-size: 28px; /* Title font size for reviews section */
+    margin-bottom: 20px; /* Space below title */
+    text-align: center; /* Center align title for reviews section */
+}
+
+.reviews__form {
+    display: flex;
+    flex-direction: column; /* Stack inputs vertically in reviews form */
+    max-width: 600px; /* Maximum width of the form for reviews */
+    margin: 0 auto; /* Center the form for reviews section */
+}
+
+.reviews__label {
+    margin-bottom: 8px; /* Space below labels in reviews form */
+}
+
+.reviews input[type="text"],
+.reviews input[type="email"] {
+    padding: 10px; /* Padding inside inputs for reviews form */
+    margin-bottom: 15px; /* Space below inputs in reviews form */
+    border-radius: 5px; /* Rounded corners for inputs in reviews form */
+    border: 1px solid #ccc; /* Border around inputs in reviews form */
+}

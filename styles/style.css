@@ -9,3 +9,9 @@
 /* Подключение стилей относящихся к main */
 @import "main.css";
 @import "typography.css";
+@import "booking.css";
+@import "cards.css";
+@import "normalise.css";
+@import "review.css";
+@import "animation.css";
+@import "adaptability.css";

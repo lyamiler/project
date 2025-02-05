@@ -1,0 +1,12 @@
+@media(max-width:768px){
+    .container{
+        width:100%;
+    }
+    .about__gallery{
+        justify-content: center;
+    }
+    .cards{
+        justify-content: center;
+    }
+
+}

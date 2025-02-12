@@ -13,15 +13,18 @@
 }
 
 .hotel__button {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 600;
     line-height: 28px;
     color: #e3ece8;
     background-color: #316b3f;
     border: 1px solid #d5e7e1;
-    border-radius: 18px;
+    border-radius: 24px;
 
     cursor: pointer;
+    text-decoration: none;
+    padding: 10px;
+    display: inline-block;
 }
 
 .additional-services__title {

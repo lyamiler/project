@@ -28,7 +28,7 @@
 /* Bold */
 @font-face {
     font-family: 'Montserrat';
-    src: url('/fonts/Montserrat-MediumItalic.ttf');
+    src: url("../fonts/Montserrat-Regular.ttf");
     font-weight: 700;
     font-style: normal;
     font-display: swap;

@@ -1,8 +1,23 @@
 .main{
-    background-color: rgb(199, 230, 190);
+    background-color: rgb(198, 236, 187);
     color:rgb(21, 58, 49);
 }
 
 .house {
     background-color: rgb(163, 203, 153);
 }
+.about__gallery{
+    margin: 0;
+    padding: 20px 0;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    list-style-type: none;
+  }
+.cards{
+    justify-content: center;
+}
+
+
+
+

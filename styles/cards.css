@@ -74,3 +74,10 @@
     object-fit: cover;
    }
    
+   .house__favourite {
+    color: green;
+    background-color: antiquewhite;
+   }
+   .house__favourite--active {
+    color: red;
+   }

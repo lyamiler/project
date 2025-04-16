@@ -2,14 +2,29 @@
 
 
 document.addEventListener('DOMContentLoaded', () => {
+
     /* 1. Исключение накладывания контента на хедер при скроле/прокрутке страницы */
 
     const header = document.querySelector('.header');       // создаем переменную находя блок по классу
-    let buttons = document.querySelectorAll('.house__favourite');
 
     if (header) {                                           // проверяем существование элемента в DOM
         console.log('Константа header существует');
 
+        /* 
+        *   Алгоритм
+        *
+        *   1. Начало.
+        *   2. Получаем высоту блока/элемента (создание переменной, которая не будет меняться).
+        *   3. Проверка условия (навешиваем слушатель событий на scroll страницы и ожидаем ее прокрутку): если страница прокручивается.
+        *       3.1. Да: Получаем значение насколько прокрутили страницу (создание переменной, которая будет меняться).
+        *           3.1.1 Проверка условия (сравниваем высоту элемента и значение прокрученной страницы): если расстояние от верха страницы больше высоты элемента
+        *               3.1.1.1. Да: устанавливаем класс модификатора на элемент
+        *               3.1.1.2. Нет (если расстояние от верха экрана меньше высоты элемента): удаляем класс модификатора у элемента
+        *       3.2. Нет: Конец
+        *   4. Конец
+        * 
+        *   Блок-схема: /images/block-schema.png
+        */
 
         const heightHeader = header.offsetHeight;           // определяем высоту блока, включая внутренние отступы
 
@@ -25,87 +40,100 @@ document.addEventListener('DOMContentLoaded', () => {
                 header.classList.remove('header--scroll')   // удаляем класс модификатора у элемента
             }
 
-        });
+        })
+
     }
 
 
 
-        const favoriteButton = document.querySelector('.house__favourite');
+  const favoriteButtons = document.querySelectorAll('.house__favourite');
 
-        if (favoriteButton) {
-            console.log('Константа favoriteButton существует');
-
-            const favoriteCount = document.querySelector('.house__favourite-count');
-
-            let isFavorite = favoriteButton.classList.contains('house__favourite--active'); // Состояние избранного
-            // let count = parseInt(favoriteCount.textContent); // Начальное значение счетчика с приведением строки к числу
-            buttons.forEach(button => {
-                button.addEventListener('click', function () {
-                    console.log("произошел клик по кнопке избранное");
-                favoriteButton.classList.add('house__favourite--active'); // Добавляем класс активного состояния
-
-                });
-            }
-            );
-            // Установка начального класса
-            // if (isFavorite) {
-            //     favoriteButton.classList.add('house__favourite--active'); // Добавляем класс активного состояния
-            // } else {
-            //     favoriteButton.classList.remove('house__favourite--active'); // Убираем класс активного состояния
-            // }
-        }
-    // Обработчик клика на иконку
-    //        favoriteButton.addEventListener('click', () => {
-    //            isFavorite = !isFavorite; // Меняем состояние
-
-    //            if (isFavorite) {
-    //                count += 1; // Увеличиваем счетчик
-    //                favoriteButton.classList.add('house__favourite--active'); // Добавляем класс активного состояния
-    //            } else {
-    //                count -= 1; // Уменьшаем счетчик
-    //                favoriteButton.classList.remove('house__favourite--active'); // Убираем класс активного состояния
-    //            }
-
-    //            favoriteCount.textContent = count; // Обновляем счетчик
-    //        });
-    //    } else {
-    //        console.log('Кнопка не найдена');
-    //    }
-
-// Получаем все кнопки с классом .house__favourite
-
-
-const favoriteButtons = document.querySelectorAll('.house__favourite');
-
-// Если кнопки существуют
-if (favoriteButtons.length > 0) {
+if (favoriteButtons) {
     console.log('Константа favoriteButtons существует');
 
-    // Для каждой кнопки
-    favoriteButtons.forEach(button => {
-        // Получаем счетчик для этой кнопки (если он существует)
-        const favoriteCount = button.closest('.house__favourite').querySelector('.house__favourite-count');
+    const favoriteCount = document.querySelector('.house__favourite-count');
 
-        // Добавляем обработчик события клика
+    favoriteButtons.forEach(button => {
+        let isFavorite = false;
+
         button.addEventListener('click', function () {
             console.log("произошел клик по кнопке избранное");
-
-            // Проверяем текущее состояние кнопки
-            let isFavorite = button.classList.contains('house__favourite--active');
-
-            // Если кнопка не активна, добавляем класс активного состояния
-            if (!isFavorite) {
-                button.classList.add('house__favourite--active');
-            } else {
-                // Иначе удаляем класс активного состояния
-                button.classList.remove('house__favourite--active');
-            }
-
+            isFavorite = !isFavorite;
             
+            if (isFavorite) {
+                button.classList.add('house__favourite--active');
+                // Логика добавления в избранное
+                console.log('Добавлено в избранное');
+                
+            } else {
+                button.classList.remove('house__favourite--active');
+                // Логика удаления из избранного
+                console.log('Удалено из избранного');
+            }
         });
     });
 }
-
 });
 
 
+// Получение элементов
+const openBtn = document.getElementById('openBooking');
+const popup = document.getElementById('bookingForm');
+const closeBtn = document.getElementById('closeForm');
+
+// Открытие формы при клике на кнопку
+openBtn.addEventListener('click', function(e) {
+  e.preventDefault(); // чтобы избежать перехода по ссылке
+  popup.style.display = 'flex'; // показываем всплывающее окно
+});
+
+// Закрытие формы при клике на кнопку закрытия
+closeBtn.addEventListener('click', function() {
+  popup.style.display = 'none';
+});
+
+// Закрытие формы при клике вне содержимого
+window.addEventListener('click', function(e) {
+  if (e.target === popup) {
+    popup.style.display = 'none';
+  }
+});
+
+
+// Домики
+const houseContainer = document.querySelector('.house');
+if (houseContainer) {
+    // Новый массив цен для домиков (можно менять значения)
+    const dataHousePrices = [
+        'Цена: 5500 руб./ночь в день рождения -50%',
+        'Цена: 8500 руб./ночь',
+        'Цена: 12500 руб./ночь'
+    ];
+
+    // Находим все элементы с ценами домиков
+    const housePrices = houseContainer.querySelectorAll('.house__price-value');
+    housePrices.forEach((item, index) => {
+        if (dataHousePrices[index]) {
+            item.textContent = dataHousePrices[index];
+        }
+    });
+}
+
+// Дополнительные услуги
+const servicesContainer = document.querySelector('.additional-services');
+if (servicesContainer) {
+    // Новый массив цен для дополнительных услуг (можно менять значения)
+    const dataServicePrices = [
+        'Цена: 3500 руб./час',
+        'Цена: 1200 руб./день',
+        'Цена: Бесплатно для гостей'
+    ];
+
+    // Находим все элементы с ценами услуг
+    const servicePrices = servicesContainer.querySelectorAll('.additional-services__price');
+    servicePrices.forEach((item, index) => {
+        if (dataServicePrices[index]) {
+            item.textContent = dataServicePrices[index];
+        }
+    });
+}

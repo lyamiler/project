@@ -105,7 +105,7 @@ const houseContainer = document.querySelector('.house');
 if (houseContainer) {
     // Новый массив цен для домиков (можно менять значения)
     const dataHousePrices = [
-        'Цена: 5500 руб./ночь в день рождения -50%',
+        'Цена: 5500 руб./ночь',
         'Цена: 8500 руб./ночь',
         'Цена: 12500 руб./ночь'
     ];
@@ -135,5 +135,36 @@ if (servicesContainer) {
         if (dataServicePrices[index]) {
             item.textContent = dataServicePrices[index];
         }
+    });
+}
+
+
+
+// Находим меню
+const headerMenu = document.querySelector('.header__menu');
+
+if (headerMenu) {
+    // Очищаем текущее меню
+    headerMenu.innerHTML = '';
+
+    // Данные для меню
+    const menuData = [
+        { link: '#about', title: 'О нас' },
+        { link: '#advantages', title: 'Наши преимущества' },
+        { link: '#services', title: 'Наши услуги' },
+        { link: '#booking', title: 'Выбрать дату бронирования' },
+        { link: '#reviews', title: 'Отзывы наших гостей' }
+    ];
+
+    // Создаём и добавляем новые пункты меню
+    menuData.forEach(item => {
+        const li = document.createElement('li');
+        li.className = 'menu__item';
+        const a = document.createElement('a');
+        a.className = 'menu__link';
+        a.href = item.link;
+        a.textContent = item.title;
+        li.appendChild(a);
+        headerMenu.appendChild(li);
     });
 }

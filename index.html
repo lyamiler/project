@@ -8,6 +8,13 @@
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
+    <div class="preloader">
+        <div class="loader">
+            <span class="dot1"></span>
+            <span class="dot2"></span>
+            <span class="dot3"></span>
+        </div>
+      </div>
     <header class="header container">
         <a class=" header__logo-wrap" href="index.html">
         <img class="header__logo" src="images/glamping-logo.PNG" alt="" width="100">
@@ -23,6 +30,7 @@
             </ul>
         </nav>
     </header>
+<div class="content"> 
     <main class="main container">
         <section id="about" class="about">
             <h2 class="about__title">О нас</h2>
@@ -34,14 +42,42 @@
                 каждым моментом вашего пребывания. 
                 Откройте для себя красоту природы, расслабьтесь у костра под звездами и создайте незабываемые воспоминания с близкими.
             </p>
-            <div class="about__gallery">
+            <!-- <div class="about__gallery">
                 <img src="images/onas1.jpg" alt="" width="300">
                 <img src="images/onas2.jpg" alt="" width="300">
                 <img src="images/onas3.jpg" alt="" width="300">
                 <img src="images/onas4.jpg" alt="" width="300">
                 <img src="images/onas5.jpg" alt="" width="300">
                 <img src="images/onas6.jpg" alt="" width="300">
-            </div>
+            </div> -->
+            <div class="images">
+                <ul class="images__list">
+                  <!-- <li class="images__item" style="cursor: pointer;">
+                    <img class="images__picture" src="images/onas1.jpg" alt="Описание изображения 1" width="300">
+                    <img class="images__picture" src="images/onas1-alt.jpg" alt="Альтернативное изображение 1" width="300" style="display: none;">
+                  </li>
+                  <li class="images__item" style="cursor: pointer;">
+                    <img class="images__picture" src="images/onas2.jpg" alt="Описание изображения 2" width="300">
+                    <img class="images__picture" src="images/onas2-alt.jpg" alt="Альтернативное изображение 2" width="300" style="display: none;">
+                  </li>
+                  <li class="images__item" style="cursor: pointer;">
+                    <img class="images__picture" src="images/onas3.jpg" alt="Описание изображения 3" width="300">
+                    <img class="images__picture" src="images/onas3-alt.jpg" alt="Альтернативное изображение 3" width="300" style="display: none;">
+                  </li>
+                  <li class="images__item" style="cursor: pointer;">
+                    <img class="images__picture" src="images/onas4.jpg" alt="Описание изображения 4" width="300">
+                    <img class="images__picture" src="images/onas4-alt.jpg" alt="Альтернативное изображение 4" width="300" style="display: none;">
+                  </li>
+                  <li class="images__item" style="cursor: pointer;">
+                    <img class="images__picture" src="images/onas5.jpg" alt="Описание изображения 5" width="300">
+                    <img class="images__picture" src="images/onas5-alt.jpg" alt="Альтернативное изображение 5" width="300" style="display: none;">
+                  </li>
+                  <li class="images__item" style="cursor: pointer;">
+                    <img class="images__picture" src="images/onas6.jpg" alt="Описание изображения 6" width="300">
+                    <img class="images__picture" src="images/onas6-alt.jpg" alt="Альтернативное изображение 6" width="300" style="display: none;">
+                  </li> -->
+                </ul>
+              </div>
         </section>
         <section id="hotel" class="hotel">
             <h2 class="hotel__title"> В отеле "Отдохни"</h2>
@@ -158,6 +194,7 @@
                 <label for "review" class "reviews__label" >Ваш отзыв:</label>
                 <textarea id "review" name "review" required placeholder "Введите ваш отзыв"></textarea>
     </main>
+</div> 
     <footer class="footer container">
         <h2  class="footer__title">Разработчик</h2>
         <p  class="footer__text">Долгомирова Юлия, ЭК-31</p>

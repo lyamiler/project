@@ -7,17 +7,88 @@
 .house {
     background-color: rgb(163, 203, 153);
 }
-.about__gallery{
-    margin: 0;
-    padding: 20px 0;
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    list-style-type: none;
-  }
-.cards{
-    justify-content: center;
+
+/* .additional-services{
+  background-color: rgb(163, 203, 153);
+} */
+
+/* Контейнер галереи */
+.images {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+  background-color: #6d8d73; /* Светлый природный фон */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(46, 204, 113, 0.15); /* Лёгкая зелёная тень */
 }
+
+/* Список изображений - гибкий ряд */
+.images__list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px 0;
+  margin: 0;
+}
+
+/* Каждая карточка */
+.images__item {
+  position: relative;
+  cursor: pointer;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 300px;
+  box-shadow: 0 2px 6px rgba(46, 204, 113, 0.3);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  background-color: #ffffff;
+}
+
+/* При наведении на карточку */
+.images__item:hover {
+  box-shadow: 0 8px 28px rgba(211, 236, 222, 0.925);
+  transform: translateY(-5px);
+}
+
+.image-container:hover img {
+  transform: scale(1.2); /* увеличение на 20% */
+}
+/* Изображения внутри карточки */
+.images__picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  transition: opacity 0.4s ease;
+  user-select: none;
+  pointer-events: none; /* Чтобы клики обрабатывал li, а не img */
+}
+
+/* Скрытое изображение */
+.images__picture[style*="display: none"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  pointer-events: none;
+}
+
+/* Адаптивность */
+@media (max-width: 1000px) {
+  .images__item {
+    width: 45vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .images__item {
+    width: 90vw;
+  }
+}
+
 
 /* Фон затемнения */
 .popup-overlay {
@@ -77,3 +148,50 @@
   }
 
 
+
+
+
+/* Скрываем контент до загрузки */
+.content {
+  display: none;
+}
+
+.preloader {
+  padding-top: 25%; /* Отступ сверху */
+  background: #fefefb; /* задаем фон при загрузке */
+  transition: opacity 0.5s ease; /* Плавный переход для изменения прозрачности */
+  text-align: center;/* центрируем текст */
+}
+
+.loader span {
+display: inline-block;/* располагаем элементы в строку */
+width: 20px;/* Ширина кругов */
+height: 20px;/* Высота кругов */
+border-radius: 100%;/* задаем круг */
+background-color: #386759;/* Цвет кругов */
+margin: 35px5px;/* Отступы вокруг кругов */
+}
+.dot1 {
+  animation: bounce 1s ease-in-out infinite;/* анимация для первой точки */
+}
+
+.dot2{
+  animation: bounce 1s ease-in-out 0.33s infinite;/*анимация для второй точки с задержкой*/
+}
+
+.dot3 {
+  animation: bounce 1s ease-in-out 0.66s infinite;/* анимация для третьей точки с задержкой */
+}
+
+/* Анимация bounce: */
+@keyframes bounce {
+  0%,
+  75%,
+  100% {
+      transform: translateY(0);/* круги на месте */
+ }
+
+  25% {
+     transform: translateY(-30px);/* круги поднимаются */
+ }
+}

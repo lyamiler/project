@@ -1,0 +1,32 @@
+[
+    {
+      "url": ["images/onas1.jpg", "images/onas1-alt.jpg"],
+      "alt": "Глэмпинг-отель Отдохни — вид на домик 1",
+      "width": 300
+    },
+    {
+      "url": ["images/onas2.jpg", "images/onas2-alt.jpg"],
+      "alt": "Глэмпинг-отель Отдохни — вид на домик 2",
+      "width": 300
+    },
+    {
+      "url": ["images/onas3.jpg", "images/onas3-alt.jpg"],
+      "alt": "Глэмпинг-отель Отдохни — уютная зона отдыха",
+      "width": 300
+    },
+    {
+      "url": ["images/onas4.jpg", "images/onas4-alt.jpg"],
+      "alt": "Глэмпинг-отель Отдохни — вечерний костёр",
+      "width": 300
+    },
+    {
+      "url": ["images/onas5.jpg", "images/onas5-alt.jpg"],
+      "alt": "Глэмпинг-отель Отдохни — интерьер домика",
+      "width": 300
+    },
+    {
+      "url": ["images/onas6.jpg", "images/onas6-alt.jpg"],
+      "alt": "Глэмпинг-отель Отдохни — вид снаружи",
+      "width": 300
+    }
+  ]

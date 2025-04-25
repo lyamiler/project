@@ -153,7 +153,7 @@ if (headerMenu) {
         { link: '#advantages', title: 'Наши преимущества' },
         { link: '#services', title: 'Наши услуги' },
         { link: '#booking', title: 'Выбрать дату бронирования' },
-        { link: '#reviews', title: 'Отзывы наших гостей' }
+        { link: '#reviews', title: 'Отзывы гостей' }
     ];
 
     // Создаём и добавляем новые пункты меню
@@ -168,3 +168,108 @@ if (headerMenu) {
         headerMenu.appendChild(li);
     });
 }
+
+
+
+
+
+    const cardsImages = document.querySelector('.images');
+    // if (!cardsImages) return;
+  
+    const cardListImages = cardsImages.querySelector('.images__list');
+    // if (!cardListImages) return;
+  
+    const apiUrl = 'images.json';
+  
+    // Функция создания карточки с двумя изображениями
+    const createCard = (imageUrls, imageAlt, imageWidth) => {
+      // Создаём элемент li
+      const li = document.createElement('li');
+      li.className = 'images__item';
+      li.style.cursor = 'pointer';
+  
+      // Создаём два img
+      const img1 = document.createElement('img');
+      img1.className = 'images__picture';
+      img1.src = imageUrls[0];
+      img1.alt = imageAlt;
+      img1.width = imageWidth;
+  
+      const img2 = document.createElement('img');
+      img2.className = 'images__picture';
+      img2.src = imageUrls[1];
+      img2.alt = imageAlt;
+      img2.width = imageWidth;
+      img2.style.display = 'none';
+  
+      // Добавляем изображения в li
+      li.appendChild(img1);
+      li.appendChild(img2);
+  
+      // Логика переключения изображений по клику
+      li.addEventListener('click', () => {
+        if (img1.style.display !== 'none') {
+          img1.style.display = 'none';
+          img2.style.display = '';
+        } else {
+          img1.style.display = '';
+          img2.style.display = 'none';
+        }
+      });
+  
+      return li;
+    };
+  
+    // Загрузка данных из images.json
+    fetch(apiUrl)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Ошибка загрузки данных');
+        }
+        return response.json();
+      })
+      .then(data => {
+        // Очищаем список перед добавлением
+   
+        cardListImages.innerHTML = '';
+  
+        data.forEach(item => {
+        
+          // Проверяем, что есть массив URL и минимум 2 изображения
+          console.log(item.url && item.url.length >= 2);
+          if (item.url && item.url.length >= 2) {
+            const alt = item.alt || '';
+            const width = item.width || 300; // по умолчанию 300
+            const card = createCard(item.url, alt, width);
+         
+            cardListImages.appendChild(card);
+          }
+        });
+      })
+      .catch(error => {
+        console.error('Ошибка:', error);
+        cardListImages.textContent = 'Не удалось загрузить изображения. Включите Go Live';
+      });
+
+
+
+
+
+
+
+
+    const preloader = document.querySelector(".preloader");
+    const content = document.querySelector(".content");
+    if (preloader && content) {
+        setTimeout(() => {
+            // Скрываем прелоадер
+            preloader.style.opacity = "0";
+            preloader.style.visibility = "hidden";
+
+            // Показываем контент
+            content.style.display = "block";
+
+            // Удаляем элемент из DOM
+            preloader.remove();
+        }, 3000); // Задержка 3 секунды
+    }

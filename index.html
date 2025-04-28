@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 </head>
+
 <body>
     <div class="preloader">
         <div class="loader">
@@ -14,15 +18,15 @@
             <span class="dot2"></span>
             <span class="dot3"></span>
         </div>
-      </div>
+    </div>
     <header class="header container">
         <a class=" header__logo-wrap" href="index.html">
-        <img class="header__logo" src="images/glamping-logo.PNG" alt="" width="100">
-        <h1 class="header__title">Глэмпинг-отель "Отдохни"</h1>
-    </a>
+            <img class="header__logo" src="images/glamping-logo.PNG" alt="" width="100">
+            <h1 class="header__title">Глэмпинг-отель "Отдохни"</h1>
+        </a>
         <nav class="header__navigation">
-            <ul class="header__menu menu"> 
-                <li class="menu__item"><a class="menu__link" href="#about">О нас</a></li>   
+            <ul class="header__menu menu">
+                <li class="menu__item"><a class="menu__link" href="#about">О нас</a></li>
                 <li class="menu__item"><a class="menu__link" href="#hotel">Наши преимущества</a></li>
                 <li class="menu__item"><a class="menu__link" href="#house">Наши услуги</a></li>
                 <li class="menu__item"><a class="menu__link" href="#booking">Выбрать дату бронирования</a></li>
@@ -30,19 +34,21 @@
             </ul>
         </nav>
     </header>
-<div class="content"> 
-    <main class="main container">
-        <section id="about" class="about">
-            <h2 class="about__title">О нас</h2>
-            <p class="about__description">
-                Добро пожаловать в глэмпинг-отель "Отдохни", где природа встречается с комфортом! 
-                Наш отель расположен в живописном уголке, вдали от городской суеты, и предлагает уникальные домики, 
-                которые идеально подходят для романтического уикенда или семейного отдыха. 
-                Мы заботимся о каждом нашем госте и предоставляем услуги на высшем уровне, чтобы вы могли наслаждаться 
-                каждым моментом вашего пребывания. 
-                Откройте для себя красоту природы, расслабьтесь у костра под звездами и создайте незабываемые воспоминания с близкими.
-            </p>
-            <!-- <div class="about__gallery">
+    <div class="content">
+        <main class="main container">
+            <section id="about" class="about">
+                <h2 class="about__title">О нас</h2>
+                <p class="about__description">
+                    Добро пожаловать в глэмпинг-отель "Отдохни", где природа встречается с комфортом!
+                    Наш отель расположен в живописном уголке, вдали от городской суеты, и предлагает уникальные домики,
+                    которые идеально подходят для романтического уикенда или семейного отдыха.
+                    Мы заботимся о каждом нашем госте и предоставляем услуги на высшем уровне, чтобы вы могли
+                    наслаждаться
+                    каждым моментом вашего пребывания.
+                    Откройте для себя красоту природы, расслабьтесь у костра под звездами и создайте незабываемые
+                    воспоминания с близкими.
+                </p>
+                <!-- <div class="about__gallery">
                 <img src="images/onas1.jpg" alt="" width="300">
                 <img src="images/onas2.jpg" alt="" width="300">
                 <img src="images/onas3.jpg" alt="" width="300">
@@ -50,9 +56,9 @@
                 <img src="images/onas5.jpg" alt="" width="300">
                 <img src="images/onas6.jpg" alt="" width="300">
             </div> -->
-            <div class="images">
-                <ul class="images__list">
-                  <!-- <li class="images__item" style="cursor: pointer;">
+                <div class="images">
+                    <ul class="images__list">
+                        <!-- <li class="images__item" style="cursor: pointer;">
                     <img class="images__picture" src="images/onas1.jpg" alt="Описание изображения 1" width="300">
                     <img class="images__picture" src="images/onas1-alt.jpg" alt="Альтернативное изображение 1" width="300" style="display: none;">
                   </li>
@@ -76,130 +82,150 @@
                     <img class="images__picture" src="images/onas6.jpg" alt="Описание изображения 6" width="300">
                     <img class="images__picture" src="images/onas6-alt.jpg" alt="Альтернативное изображение 6" width="300" style="display: none;">
                   </li> -->
+                    </ul>
+                </div>
+            </section>
+            <section id="hotel" class="hotel">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">Уникальные домики</div>
+                      <div class="swiper-slide">Услуги на высшем уровне</div>
+                      <div class="swiper-slide">Природа и уединение</div>
+                      <div class="swiper-slide">Комфортные условия для отдыха</div>
+                      <div class="swiper-slide">Разнообразные активности на свежем воздухе</div>
+                      <div class="swiper-slide">Индивидуальный подход к каждому гостю</div>
+                      <div class="swiper-slide">Семейные пакеты и специальные предложения</div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                  </div>
+                <!-- <h2 class="hotel__title"> В отеле "Отдохни"</h2>
+                <ul class="hotel__list">
+                    <li class="hotel__item">Уникальные домики</li>
+                    <li class="hotel__item">Услуги на высшем уровне</li>
+                    <li class="hotel__item">Природа и уединение</li>
+                    <li class="hotel__item">Комфортные условия для отдыха</li>
+                    <li class="hotel__item">Разнообразные активности на свежем воздухе</li>
+                    <li class="hotel__item">Индивидуальный подход к каждому гостю</li>
+                    <li class="hotel__item">Семейные пакеты и специальные предложения</li>
+                </ul> -->
+                <a class="hotel__button" href="#booking" id="openBooking">ЗАБРОНИРОВАТЬ СЕЙЧАС</a>
+                <!-- Всплывающая форма -->
+                <div id="bookingForm" class="popup-overlay" style="display: none;">
+                    <div class="popup-content">
+                        <button class="close-btn" id="closeForm">&times;</button>
+                        <h2>Форма бронирования</h2>
+                        <form>
+                            <!-- Ваши поля формы -->
+                            <label for="name">Имя:</label>
+                            <input type="text" id="name" name="name" required>
+
+                            <label for="date">Дата:</label>
+                            <input type="date" id="date" name="date" required>
+
+                            <!-- Другие поля -->
+
+                            <button class="hotel__button" type="submit">Забронировать</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <section id="house" class="house">
+                <h2 class="house__title">ДОМИКИ И ЦЕНЫ</h2>
+                <ul class="cards">
+                    <div class="house__card">
+                        <img class="house__img" src="images/domdlyadvoih.jpg" alt="" width="400">
+                        <p class="house__name">Дом для двоих</p>
+                        <p class='house__description'>Идеально подходит для романтического отдыха. Уютный интерьер и
+                            прекрасный вид на природу.</p>
+                        <p class='house__price-value'>Цена: 5000 руб./ночь</p>
+                        <button class="house__favourite ">❤</button>
+                    </div>
+                    <div class="house__card">
+                        <img class="house__img" src="images/domdlyasem'i.jpg" alt="" width="400">
+                        <p class="house__name">Дом для семьи</p>
+                        <p class='house__description'>Просторный дом с двумя спальнями. Отличный выбор для семейного
+                            отдыха.</p>
+                        <p class='house__price-value'>Цена: 8000 руб./ночь</p>
+                        <button class="house__favourite ">❤</button>
+                    </div>
+                    <div class="house__card">
+                        <img class="house__img" src="images/domdlyabolshoikompanii.jpeg" alt="" width="400">
+                        <p class="house__name">Дом для большой компании</p>
+                        <p class='house__description'>Вместительный дом с общей зоной для отдыха. Идеально подходит для
+                            дружеских встреч.</p>
+                        <p class='house__price-value'>Цена: 12000 руб./ночь</p>
+                        <button class="house__favourite ">❤</button>
+                    </div>
                 </ul>
-              </div>
-        </section>
-        <section id="hotel" class="hotel">
-            <h2 class="hotel__title"> В отеле "Отдохни"</h2>
-            <ul class="hotel__list">
-                <li class="hotel__item">Уникальные домики</li>
-                <li class="hotel__item">Услуги на высшем уровне</li>
-                <li class="hotel__item">Природа и уединение</li>
-                <li class="hotel__item">Комфортные условия для отдыха</li>
-                <li class="hotel__item">Разнообразные активности на свежем воздухе</li>
-                <li class="hotel__item">Индивидуальный подход к каждому гостю</li>
-                <li class="hotel__item">Семейные пакеты и специальные предложения</li>
-            </ul>
-            <a class="hotel__button" href="#booking" id="openBooking">ЗАБРОНИРОВАТЬ СЕЙЧАС</a>
-            <!-- Всплывающая форма -->
-<div id="bookingForm" class="popup-overlay" style="display: none;">
-    <div class="popup-content">
-      <button class="close-btn" id="closeForm">&times;</button>
-      <h2>Форма бронирования</h2>
-      <form>
-        <!-- Ваши поля формы -->
-        <label for="name">Имя:</label>
-        <input type="text" id="name" name="name" required>
-        
-        <label for="date">Дата:</label>
-        <input type="date" id="date" name="date" required>
-        
-        <!-- Другие поля -->
-        
-        <button class="hotel__button"type="submit">Забронировать</button>
-      </form>
+                <p class="house__text">ЖДЕМ ВАС В ГОСТИ!</p>
+                <a class='house__link' href="#booking">Посмотреть свободные даты</a>
+
+            </section>
+
+            <section class="additional-services">
+                <h2 class="additional-services__title">ДОПОЛНИТЕЛЬНЫЕ УСЛУГИ</h2>
+                <ul class="cards">
+                    <div class="additional-services__card">
+                        <img class="additional-services__img" src="images/furaco.jpg" alt="фурако" width="400">
+                        <p class="additional-services__name">Фурако</p>
+                        <p class="additional-services__description">Идеальное место для расслабления и отдыха на свежем
+                            воздухе.</p>
+                        <p class="additional-services__price">Цена: 3000 руб./час</p>
+                        <button class="house__favourite ">❤</button>
+                    </div>
+                    <div class="additional-services__card">
+                        <img class="additional-services__img" src="images/mangal.jpg" alt="мангал" width="400">
+                        <p class="additional-services__name">Мангал</p>
+                        <p class="additional-services__description">Аренда мангала для приготовления барбекю с друзьями
+                            и семьей.</p>
+                        <p class="additional-services__price">Цена: 1000 руб./день</p>
+                        <button class="house__favourite ">❤</button>
+                    </div>
+                    <div class="additional-services__card">
+                        <img class="additional-services__img" src="images/bassein.jpg" alt="бассейн" width="400">
+                        <p class="additional-services__name">Бассейн</p>
+                        <p class="additional-services__description">Доступ к нашему бассейну с комфортной зоной для
+                            отдыха.</p>
+                        <p class="additional-services__price">Цена: Включено в стоимость проживания</p>
+                        <button class="house__favourite ">❤</button>
+                    </div>
+                </ul>
+            </section>
+            <section id="booking" class="booking">
+                <h2 class="booking__title">Выберите дату бронирования</h2>
+                <!-- Booking Form -->
+                <form action="#" method="#" class="booking__form">
+                    <label for="check-in-date" class="booking__label">Дата заезда:</label>
+                    <input type="date" id="check-in-date" name="check-in-date" required>
+                    <label for="check-out-date" class="booking _label">Дата выезда:</label>
+                    <input type="date" id="check-out-date" name="check-out-date" required>
+                    <label for="guest-name" class="booking_label">Ваше имя:</label>
+                    <input type="text" id="guest-name" name="guest-name" required placeholder="Введите ваше имя">
+                    <label for="email" class="booking_label">Ваш Email:</label>
+                    <input type="email" id="email" name="email" required placeholder="Введите ваш Email">
+                    <label for="requirements" class="booking_label">Дополнительные требования:</label>
+                    <textarea id="requirements" name="requirements" placeholder="Введите ваши требования"></textarea>
+                    <button type="submit" class="booking_button">Забронировать</button>
+                </form>
+            </section>
+
+            <section id="reviews" class="reviews">
+                <h2 class="reviews__title">Отзывы наших гостей</h2>
+                <form action="#" method="#" class="reviews__form">
+                    <label for="name" class="reviews__label">Ваше имя:</label>
+                    <input type="text" id="name" name="name" required placeholder="Введите ваше имя">
+
+                    <label for "review" class "reviews__label">Ваш отзыв:</label>
+                    <textarea id "review" name "review" required placeholder "Введите ваш отзыв"></textarea>
+            </section>
+        </main>
     </div>
-  </div>
-        </section>
-
-        <section id="house" class="house">
-            <h2 class="house__title">Домики и цены</h2> 
-            <ul class="cards">
-            <div class="house__card">
-                <img class="house__img" src="images/domdlyadvoih.jpg" alt="" width="400">
-                <p class="house__name">Дом для двоих</p>
-                <p class='house__description'>Идеально подходит для романтического отдыха. Уютный интерьер и прекрасный вид на природу.</p>
-                <p class='house__price-value'>Цена: 5000 руб./ночь</p>
-                <button class="house__favourite ">❤</button>
-            </div>
-            <div class="house__card">
-                <img class="house__img" src="images/domdlyasem'i.jpg" alt="" width="400">
-                <p class="house__name">Дом для семьи</p>
-                <p class='house__description'>Просторный дом с двумя спальнями. Отличный выбор для семейного отдыха.</p>
-                <p class='house__price-value'>Цена: 8000 руб./ночь</p>
-                <button class="house__favourite ">❤</button>
-            </div>
-            <div class="house__card">
-                <img class="house__img" src="images/domdlyabolshoikompanii.jpeg" alt="" width="400">
-                <p class="house__name">Дом для большой компании</p>
-                <p class='house__description'>Вместительный дом с общей зоной для отдыха. Идеально подходит для дружеских встреч.</p>
-                <p class='house__price-value'>Цена: 12000 руб./ночь</p>
-                <button class="house__favourite ">❤</button>
-            </div>
-        </ul>
-            <p class="house__text">Ждем вас в гости!</p>
-            <a class='house__link' href="#booking">Посмотреть свободные даты</a> 
-        </section>
-
-        <section class="additional-services">
-            <h2 class="additional-services__title">Дополнительные услуги</h2>
-            <ul class="cards">
-            <div class="additional-services__card">
-                <img class="additional-services__img" src="images/furaco.jpg" alt="фурако" width="400">
-                <p class="additional-services__name">Фурако</p>
-                <p class="additional-services__description">Идеальное место для расслабления и отдыха на свежем воздухе.</p>
-                <p class="additional-services__price">Цена: 3000 руб./час</p>
-                <button class="house__favourite ">❤</button>
-            </div>
-            <div class="additional-services__card">
-                <img class="additional-services__img" src="images/mangal.jpg" alt="мангал" width="400">
-                <p class="additional-services__name">Мангал</p>
-                <p class="additional-services__description">Аренда мангала для приготовления барбекю с друзьями и семьей.</p>
-                <p class="additional-services__price">Цена: 1000 руб./день</p>
-                <button class="house__favourite ">❤</button>
-            </div>
-            <div class="additional-services__card">
-                <img class="additional-services__img" src="images/bassein.jpg" alt="бассейн" width="400">
-                <p class="additional-services__name">Бассейн</p>
-                <p class="additional-services__description">Доступ к нашему бассейну с комфортной зоной для отдыха.</p>
-                <p class="additional-services__price">Цена: Включено в стоимость проживания</p>
-                <button class="house__favourite ">❤</button>
-            </div>
-        </ul>
-        </section>
-        <section id="booking" class="booking">
-            <h2 class="booking__title">Выберите дату бронирования</h2>
-            <!-- Booking Form -->
-            <form action="#" method="#" class="booking__form">
-                <label for="check-in-date" class ="booking__label">Дата заезда:</label>
-                 <input type ="date" id ="check-in-date" name ="check-in-date" required>
-                 <label for ="check-out-date" class ="booking _label">Дата выезда:</label> 
-                 <input type ="date" id ="check-out-date" name ="check-out-date" required>
-                 <label for ="guest-name"class ="booking_label">Ваше имя:</label> 
-                 <input type ="text"id ="guest-name"name ="guest-name"required placeholder ="Введите ваше имя">
-                 <label for ="email"class ="booking_label">Ваш Email:</label> 
-                 <input type ="email"id ="email"name ="email"required placeholder ="Введите ваш Email">
-                 <label for ="requirements"class ="booking_label">Дополнительные требования:</label> 
-                 <textarea id ="requirements"name ="requirements"placeholder ="Введите ваши требования"></textarea>
-                 <button type ="submit"class ="booking_button">Забронировать</button> 
-             </form>  
-          </section>
-
-          <section id="reviews" class="reviews">
-            <h2 class="reviews__title">Отзывы наших гостей</h2>
-            <form action="#" method="#" class="reviews__form">
-                <label for="name" class="reviews__label">Ваше имя:</label>
-                <input type="text" id="name" name="name" required placeholder="Введите ваше имя">
-
-                <label for "review" class "reviews__label" >Ваш отзыв:</label>
-                <textarea id "review" name "review" required placeholder "Введите ваш отзыв"></textarea>
-    </main>
-</div> 
     <footer class="footer container">
-        <h2  class="footer__title">Разработчик</h2>
-        <p  class="footer__text">Долгомирова Юлия, ЭК-31</p>
+        <h2 class="footer__title">Разработчик</h2>
+        <p class="footer__text">Долгомирова Юлия, ЭК-31</p>
     </footer>
     <script src="scripts/script.js"></script>
 </body>
-</html>
 
+</html>

@@ -1,4 +1,51 @@
 
+.house__title,
+.additional-services__title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #2e7d32; /* насыщенный зелёный */
+    margin: 15px 0 10px 0;
+    text-align: center;
+    text-transform: capitalize; /* первая буква заглавная */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Текст описания */
+.house__text {
+    font-size: 20px;
+    color: #273527;
+    font-style: italic;
+    margin: 0 0 15px 0;
+    line-height: 1.5;
+    text-align: center;
+    font-family: 'Georgia', serif;
+}
+
+/* Ссылки (например, кнопки или переходы) */
+.house__link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4d7e59;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    text-align: center;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    user-select: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.house__link:hover,
+.house__link:focus {
+    background-color: #2e7d32;
+    box-shadow: 0 4px 12px rgba(46, 125, 50, 0.6);
+    outline: none;
+}
+
+
 
    .cards {
     max-width: 1200px;       /* Максимальная ширина контейнера */

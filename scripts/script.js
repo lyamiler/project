@@ -150,8 +150,8 @@ if (headerMenu) {
     // Данные для меню
     const menuData = [
         { link: '#about', title: 'О нас' },
-        { link: '#advantages', title: 'Наши преимущества' },
-        { link: '#services', title: 'Наши услуги' },
+        { link: '#hotel', title: 'Наши преимущества' },
+        { link: '#house', title: 'Наши услуги' },
         { link: '#booking', title: 'Выбрать дату бронирования' },
         { link: '#reviews', title: 'Отзывы гостей' }
     ];
@@ -273,3 +273,51 @@ if (headerMenu) {
             preloader.remove();
         }, 3000); // Задержка 3 секунды
     }
+
+
+
+
+
+// 3.7
+
+
+    const swiper = new Swiper('.swiper', {
+      slidesPerView: 'auto',
+      spaceBetween: 20,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+      },
+      // Добавьте breakpoints при необходимости
+      breakpoints: {
+        768: {
+          slidesPerView: 2
+        },
+        1024: {
+          slidesPerView: 3
+        }
+      }
+    });
+
+
+
+    const list = document.querySelector('.hotel__list');
+const items = Array.from(list.querySelectorAll('.hotel__item'));
+const swiperWrapper = document.createElement('div');
+
+swiperWrapper.className = 'swiper-wrapper';
+items.forEach(item => {
+  const slide = document.createElement('div');
+  slide.className = 'swiper-slide';
+  slide.innerHTML = item.innerHTML;
+  swiperWrapper.appendChild(slide);
+});
+
+list.innerHTML = '';
+list.classList.add('swiper');
+list.appendChild(swiperWrapper);
+list.insertAdjacentHTML('beforeend', '<div class="swiper-pagination"></div>');
+
+
+
+
